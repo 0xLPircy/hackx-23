@@ -5,7 +5,7 @@ import { Pie } from "react-chartjs-2";
 import { GlobalContext } from "@/context/GlobalState";
 
 const PieChart = async () => {
-  const { transactions } = useContext(GlobalContext);
+  let { transactions } = useContext(GlobalContext);
   const amounts = transactions.map((transaction) => transaction.amount);
   const [userData, setUserData] = useState({
     labels: transactions.map((data) => data.text),
@@ -13,7 +13,16 @@ const PieChart = async () => {
       {
         label: "OutFlow INR",
         data: transactions.map((data) => data.amount),
-        backgroundColor: ["#212121", "#123456", "#456789", "#983100"],
+        backgroundColor: [
+          "#212121",
+          "#123456",
+          "#456789",
+          "#983100",
+          "#212125",
+          "#123256",
+          "#457889",
+          "#981200",
+        ],
       },
     ],
   });
