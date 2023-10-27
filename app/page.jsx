@@ -5,8 +5,8 @@ import { ExpenseTracker, SipCalc } from "./Views";
 
 export default function Home() {
   return (
-    <main className="mainBg w-[100vw] h-[100vh] grid grid-flow-row pb-20">
-      <div className="grid grid-flow-col">
+    <main className="mainBg w-[100vw] h-[100vh] grid grid-flow-row pb-20 gap-3">
+      <div className="grid md:grid-flow-col grid-flow-row">
         <SipCalc />
         <div className="place-self-center bg-[#eeeeee] rounded-lg p-6 m-12">
           <ExpenseTracker />
@@ -15,7 +15,7 @@ export default function Home() {
           <LineChart />
         </div>
       </div>
-      <div className="grid grid-flow-col max-w-[100vw] place-self-center gap-12">
+      <div className="grid md:grid-flow-col grid-flow-row max-w-[100vw] place-self-center gap-12">
         <div className="w-[400px] h-[400px] bg-[#eeeeee] rounded-md place-self-center">
           <PieChart />
         </div>
